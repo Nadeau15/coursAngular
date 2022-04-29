@@ -4,7 +4,11 @@
   <!--*ngFor permet au div de se repeter pour chaque produit de la liste-->
 
   <h3>
-    {{ product.name }}
+    <a [title]="product.name + ' details'">
+      <!-- <a [title]=... > fait en sorte de lorsqu'on pointe un lien avec la souris, on voit le nom du produit suivis de details -->
+      {{ product.name }}
+    </a>
+    <!-- <a></a> crée un lien ayant comme nom le contenu de l'interpolation -->
     <!--  {{}} (interpolation) Permet de render la valeur de la propriete comme etant du texte -->
   </h3>
 </div>
