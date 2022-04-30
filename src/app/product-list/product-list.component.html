@@ -11,6 +11,16 @@
     <!-- <a></a> crée un lien ayant comme nom le contenu de l'interpolation -->
     <!--  {{}} (interpolation) Permet de render la valeur de la propriete comme etant du texte -->
   </h3>
+
+  <p *ngIf="product.description">Description: {{ product.description }}</p>
+
+  <button type="button" (click)="share()">Share</button>
+
+  <!-- affiche ProductAlertsComponent comme un enfant de ProductListComponent-->
+  <app-product-alerts 
+    [product]="product"
+    (notify)="onNotify()"> 
+  </app-product-alerts>
 </div>
 
 <!-- 
