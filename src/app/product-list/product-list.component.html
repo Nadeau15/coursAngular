@@ -4,7 +4,9 @@
   <!--*ngFor permet au div de se repeter pour chaque produit de la liste-->
 
   <h3>
-    <a [title]="product.name + ' details'">
+    <a 
+      [title]="product.name + ' details'"
+      [routerLink]= "['/products', product.id]">
       <!-- <a [title]=... > fait en sorte de lorsqu'on pointe un lien avec la souris, on voit le nom du produit suivis de details -->
       {{ product.name }}
     </a>
